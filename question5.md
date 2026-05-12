@@ -9,3 +9,5 @@ Prompt:
 How would you occupy your time?
 
 Your answer can be funny, serious, practical, weird, optimistic, or suspicious. Explain what you would spend your days doing and why.
+
+I would enjoy it while it lasts, it's just like how Squidward would feel when he went somewhere to where everyone was just like him, it'll be fun at first, but when you have everything.  You won't experiecne struggles, that's what makes us human.

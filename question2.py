@@ -1,28 +1,27 @@
-Link Extractor
+# Link Extractor
+# A.I Disclaimer: Some, I used A.I to fix syntax errors
+import re
+import os
 
-Write a Python program that reads a text file, finds links using regular expressions, and writes just the links to a new file.
+input_file = input("Enter input filename: ")
 
-Requirements:
+if not os.path.exists(input_file):
+    print("Error: File does not exist.")
+    exit()
 
-Prompt the user for an input filename.
-If the file does not exist, display an error and exit.
-Use regex/regular expressions to find links.
-Find links that start with http:// or https://.
-Write only the links to an output file.
-Prompt the user for the output filename.
-Print how many links were found.
-Example Input File:
+output_file = input("Enter output filename: ")
 
-Here is a website: https://ualr.edu
-Here is another one: http://example.com/page
-This line has no link.
-Example Output File:
+with open(input_file, "r") as file:
+    content = file.read()
 
-https://ualr.edu
-http://example.com/page
-Example Program Run:
+pattern = r"https?://\S+"
 
-Enter input filename: links.txt
-Enter output filename: found_links.txt
-Found 2 links.
-Links written to found_links.txt.
+links = re.findall(pattern, content)
+
+with open(output_file, "w") as file:
+    for link in links:
+        file.write(link + "\n")
+
+# Print results
+print(f"Found {len(links)} links.")
+print(f"Links written to {output_file}.")
